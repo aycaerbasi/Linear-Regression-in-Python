@@ -65,6 +65,9 @@ print('Coefficient of determination (R^2): %.3f' % r2_score(y_test, y_hat))
 print('Mean squared error (MSE): %.3f'% mean_squared_error(y_test, y_hat))
 print('Root mean squared error (RMSE) : %.3f'% sqrt(mean_squared_error(y_test, y_hat)) )
 
+#visuliaze prediction and actual
+plt.scatter(y_test, y_hat,  alpha=0.5, color="purple")
+
 #Random forest
 from sklearn.ensemble import RandomForestRegressor
 forest_reg = RandomForestRegressor(random_state=42)
